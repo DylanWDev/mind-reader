@@ -1,9 +1,9 @@
 let returnBtn = document.getElementById("resetBtn")
 let nextBtn = document.getElementById("nextBtn")
-let subText1 = document.getElementById("subText")
+let subText = document.getElementById("subText")
 let subText2 = document.getElementById("subText2")
 let title = document.getElementById("title")
-let symbols = ["♔", "♕", "♖", "♗", "♘", "♙"]
+let symbols = ["♔", "♕", "♖", "♗", "♘", "♤", "♧", "♡", "♢",]
 
 let page = 0
 
@@ -11,13 +11,14 @@ let page = 0
  let pageArr = [ 
     { // page 1
       title: "I can read your mind",
+      hideNextBtn: "",
       returnBtn: "GO",
     },
     { // page 2
         title: "Pick a number from 01 -99",
         nextBtn: "Next",
         subText: "when you have your number click next",
-        returnBtn: "⭯"
+        returnBtn: "GO"
     },
     { // page 3
         title: "Add both digits together to get a new number",
@@ -27,13 +28,14 @@ let page = 0
         returnBtn: "⭯"
     },
     { // page 4
+      title: "Subtract your new number from thr original number",
       nextBtn: "Next",
       subText: "Ex: 14 - 5 = 9",
       subText2: "click next to proceed",
       returnBtn: "⭯"
     },
     { // page 5
-      title: "Subtract your new number from thr original number",
+      title: "",
       nextBtn: "Next",
       subText: "find your new number",
       subText2: "Note the symbol beside the number",
@@ -47,7 +49,6 @@ let page = 0
   ]
 
 
-nextBtn.addEventListener("click", initPage);
 returnBtn.addEventListener("click", initPage);
 
 
@@ -55,14 +56,18 @@ returnBtn.addEventListener("click", initPage);
 
 
 function initPage() {
-  title.innerHTML = pageArr[0].title;
-  returnBtn.innerHTML = pageArr[0].returnBtn;
+  title.innerHTML = pageArr[page].title;
+  returnBtn.innerHTML = pageArr[page].returnBtn;
+  nextBtn.innerHTML = pageArr[page].nextBtn;
+  nextBtn.style.display = 'none'
 
-  if (pageArr[0].nextBtn) {
-    nextBtn.innerHTML = pageArr[0].nextBtn;
-    nextBtn.style.display = "block"; // Show the 'nextBtn'
-  } else {
-    nextBtn.style.display = "none"; // Hide the 'nextBtn'
+  if (page === 5) {
+    
+  } 
+
+  page++
+  if (page >= 6){
+    page = 0
   }
 }
 initPage()
