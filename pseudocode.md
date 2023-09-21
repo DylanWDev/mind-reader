@@ -1,6 +1,14 @@
 # mind-reader pseudocode
 
-## what atomic design elements shouls i use
+## initialize my global variables
+
+## add eventListeners
+
+## have my pages number = 0
+
+## initialize the irst page
+
+## 
 
 ### Atoms?
 > p  
@@ -13,6 +21,8 @@
 ### Organisms
 > nav
 
+
+## make an array
 
 ## create one page that displays different things based on conditions?
 > hide things when needed
