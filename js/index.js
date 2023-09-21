@@ -11,13 +11,14 @@ let page = 0
  let pageArr = [ 
     { // page 1
       title: "I can read your mind",
+      hideNextBtn: "",
       returnBtn: "GO",
     },
     { // page 2
         title: "Pick a number from 01 -99",
         nextBtn: "Next",
         subText: "when you have your number click next",
-        returnBtn: "⭯"
+        returnBtn: "GO"
     },
     { // page 3
         title: "Add both digits together to get a new number",
@@ -47,7 +48,6 @@ let page = 0
   ]
 
 
-nextBtn.addEventListener("click", initPage);
 returnBtn.addEventListener("click", initPage);
 
 
@@ -55,14 +55,14 @@ returnBtn.addEventListener("click", initPage);
 
 
 function initPage() {
-  title.innerHTML = pageArr[0].title;
-  returnBtn.innerHTML = pageArr[0].returnBtn;
+  title.innerHTML = pageArr[page].title;
+  returnBtn.innerHTML = pageArr[page].returnBtn;
+  nextBtn.innerHTML = pageArr[page].nextBtn;
+  nextBtn.style.display = 'none'
 
-  if (pageArr[0].nextBtn) {
-    nextBtn.innerHTML = pageArr[0].nextBtn;
-    nextBtn.style.display = "block"; // Show the 'nextBtn'
-  } else {
-    nextBtn.style.display = "none"; // Hide the 'nextBtn'
+  page++
+  if (page >= 6){
+    page = 0
   }
 }
 initPage()
