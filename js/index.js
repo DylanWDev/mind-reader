@@ -54,9 +54,6 @@ resetBtn.addEventListener("click", initPage);
 nextBtn.addEventListener("click", initPage);
 
 
-
-
-
 function initPage(e) {
 
   console.log(page)
@@ -74,6 +71,7 @@ function initPage(e) {
     page++
     hideElement()
   }
+  
   pageArr[5].title= symbols[1]
   title.innerHTML = pageArr[page].title;
   resetBtn.innerHTML = pageArr[page].returnBtn;
@@ -113,7 +111,7 @@ let numbersWithSymbols = [];
 let symbolNum = 0
 
 function addSymbols() {
-  for (let i = 0; i <= 99; i++) {
+  for (let i = 1; i <= 99; i++) {
     if (i % 9 === 0) {
     numSymbol.push(symbols[1] +  ' = ' + i +"<br/>" )
     } else {
