@@ -78,15 +78,16 @@ function initPage(e) {
   title.innerHTML = pageArr[page].title;
   resetBtn.innerHTML = pageArr[page].returnBtn;
   nextBtn.innerHTML = pageArr[page].nextBtn;
-  // page[4].title = numSymbol.toString().replaceAll(",", "")
+  subText.innerHTML = pageArr[page].subText
+  page[4].title = numSymbol.toString().replaceAll(",", "")
 }
 //* initPage()
 
 function hideElement() {
-  if (page === 0) {
-    document.getElementById('nextBtn').classList.add('d-none')
-  } else {
+  if (page === 0 || 5) {
     document.getElementById('nextBtn').classList.remove('d-none')
+  } else {
+    document.getElementById('nextBtn').classList.add('d-none')
   }
 }
 
@@ -106,17 +107,17 @@ console.log(symbols)
 let numbersWithSymbols = [];
 
 
-// function addSymbols() {
-//   for (let i = 0; i <= 99; i++) {
-//     if (i % 9 === 0) {
-//     numSymbol.push(symbols[0] +  ' = ' + i +"<br/>" )
-//     } else {
-//       numSymbol.push(symbols[] +  ' = ' + i +"<br/>")
-//     }
-//   }
-//   console.log(numSymbol)
+function addSymbols() {
+  for (let i = 0; i <= 99; i++) {
+    if (i % 9 === 0) {
+    numSymbol.push(symbols[0] +  ' = ' + i +"<br/>" )
+    } else {
+      numSymbol.push(symbols[i] +  ' = ' + i +"<br/>")
+    }
+  }
+  console.log(numSymbol)
   
   
 
-// }
-// addSymbols()
+}
+addSymbols()
