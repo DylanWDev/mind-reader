@@ -3,7 +3,7 @@ let nextBtn = document.getElementById("nextBtn")
 let subText = document.getElementById("subText")
 let subText2 = document.getElementById("subText2")
 let title = document.getElementById("title")
-let symbols = ["♔", "♕", "♖", "♗", "♘", "♤", "♧", "♡", "♢",]
+let symbols = ["♔", "♕", "♖", "♗", "♘", "♤", "♧", "♡", "♢", "☀", "☾", "☁",]
 
 let page = 0
 let numSymbol = []
@@ -36,14 +36,14 @@ let numSymbol = []
       returnBtn: "⭯"
     },
     { //* page 5
-      title: "",
+      title: "hi bbb",
       nextBtn: "Next",
       subText: "find your new number",
       subText2: "Note the symbol beside the number",
       resetBtn: "⭯"
     },
     { //* page 6
-      title: "",
+      title: "hi bbg",
       subText: "Your symbol is:",
       resetBtn: "⭯"
     }
@@ -74,16 +74,21 @@ function initPage(e) {
     page++
     hideElement()
   }
-  
+  pageArr[5].title= symbols[1]
   title.innerHTML = pageArr[page].title;
   resetBtn.innerHTML = pageArr[page].returnBtn;
   nextBtn.innerHTML = pageArr[page].nextBtn;
+  pageArr[4].title = numSymbol.toString().replaceAll(",", "")
   subText.innerHTML = pageArr[page].subText
-  page[4].title = numSymbol.toString().replaceAll(",", "")
 }
 //* initPage()
 
 function hideElement() {
+  if (page === 4) {
+    document.getElementById('title').classList.add('overflow-y-auto')
+  } else {
+    document.getElementById('title').classList.remove('overflow-y-auto')
+  }
   if (page === 0 || 5) {
     document.getElementById('nextBtn').classList.remove('d-none')
   } else {
@@ -105,19 +110,24 @@ shuffle(symbols)
 console.log(symbols)
 
 let numbersWithSymbols = [];
-
+let symbolNum = 0
 
 function addSymbols() {
   for (let i = 0; i <= 99; i++) {
     if (i % 9 === 0) {
-    numSymbol.push(symbols[0] +  ' = ' + i +"<br/>" )
+    numSymbol.push(symbols[1] +  ' = ' + i +"<br/>" )
     } else {
-      numSymbol.push(symbols[i] +  ' = ' + i +"<br/>")
+      numSymbol.push(symbols[symbolNum] +  ' = ' + i +"<br/>")
+      if(symbolNum > 9){
+        symbolNum = 0
+    }
+}
+symbolNum++
     }
   }
   console.log(numSymbol)
   
   
 
-}
+
 addSymbols()
