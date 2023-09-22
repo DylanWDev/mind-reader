@@ -1,3 +1,4 @@
+//* init global variables
 let returnBtn = document.getElementById("resetBtn")
 let nextBtn = document.getElementById("nextBtn")
 let subText = document.getElementById("subText")
@@ -49,19 +50,18 @@ let numSymbol = []
     }
   ]
 
-
+//* adds an click event to both the reset nand next button
 resetBtn.addEventListener("click", initPage);
 nextBtn.addEventListener("click", initPage);
-
 
 function initPage(e) {
 
   console.log(page)
   
-  if (e.target.id === 'resetBtn') {
-    if (page === 0) {
-      page++ 
-    } else {
+  if (e.target.id === 'resetBtn') {  //* if the events target id is resetBtn
+    if (page === 0) { //* checks if page is = to 0
+      page++ //* increments if 0 does = 0
+    } else { //* else brings me back to page 0
       page = 0
     }
     hideElement()
@@ -81,18 +81,19 @@ function initPage(e) {
 }
 //* initPage()
 
-function hideElement() {
+function hideElement() {  // adds or removes elements depending on page im on
   if (page === 4) {
     document.getElementById('title').classList.add('overflow-y-auto')
   } else {
     document.getElementById('title').classList.remove('overflow-y-auto')
   }
-  if (page === 0 || 5) {
-    document.getElementById('nextBtn').classList.remove('d-none')
-  } else {
+  if (page === 0 || page === 5) {
     document.getElementById('nextBtn').classList.add('d-none')
+  } else {
+    document.getElementById('nextBtn').classList.remove('d-none')
   }
 }
+
 
 function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
