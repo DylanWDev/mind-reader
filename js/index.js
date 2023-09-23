@@ -34,7 +34,7 @@ let pageArr = [
   },
   {
     //* page 4
-    title: "Subtract your new number from thr original number",
+    title: "Subtract your new number from the original number",
     nextBtn: "Next",
     subText: "Ex: 14 - 5 = 9",
     subText2: "click next to proceed",
