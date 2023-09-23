@@ -80,7 +80,7 @@ function initPage(e) {
     hideElement();
   }
 
-  pageArr[5].title = symbols[1];
+  pageArr[5].title = symbols[0];
   title.innerHTML = pageArr[page].title;
   resetBtn.innerHTML = pageArr[page].returnBtn;
   nextBtn.innerHTML = pageArr[page].nextBtn;
@@ -128,7 +128,7 @@ let symbolNum = 0;
 function addSymbols() {
   for (let i = 0; i <= 99; i++) {
     if (i % 9 === 0) {
-      numSymbol.push(symbols[1] + " = " + i + "<br/>");
+      numSymbol.push(symbols[0] + " = " + i + "<br/>");
     } else {
       numSymbol.push(symbols[symbolNum] + " = " + i + "<br/>");
       if (symbolNum > 9) {
