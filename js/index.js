@@ -128,7 +128,7 @@ let symbolNum = 0;
 function addSymbols() {
   for (let i = 0; i <= 99; i++) {
     if (i % 9 === 0) {
-      numSymbol.push(symbols[1] + " = " + i + "<br/>");
+      numSymbol.push(symbols[0] + " = " + i + "<br/>");
     } else {
       numSymbol.push(symbols[symbolNum] + " = " + i + "<br/>");
       if (symbolNum > 9) {
