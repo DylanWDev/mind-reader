@@ -38,15 +38,15 @@ let numSymbol = []
     },
     { //* page 5
       title: "hi bbb",
-      nextBtn: "Next",
+      nextBtn: "Reveal",
       subText: "find your new number",
       subText2: "Note the symbol beside the number",
-      resetBtn: "⭯"
+      returnBtn: "⭯"
     },
     { //* page 6
       title: "hi bbg",
       subText: "Your symbol is:",
-      resetBtn: "⭯"
+      returnBtn: "⭯"
     }
   ]
 
@@ -72,7 +72,7 @@ function initPage(e) {
     hideElement()
   }
   
-  pageArr[5].title= symbols[1]
+  pageArr[5].title= symbols[0]
   title.innerHTML = pageArr[page].title;
   resetBtn.innerHTML = pageArr[page].returnBtn;
   nextBtn.innerHTML = pageArr[page].nextBtn;
@@ -112,9 +112,9 @@ let numbersWithSymbols = [];
 let symbolNum = 0
 
 function addSymbols() {
-  for (let i = 1; i <= 99; i++) {
+  for (let i = 0; i <= 99; i++) {
     if (i % 9 === 0) {
-    numSymbol.push(symbols[1] +  ' = ' + i +"<br/>" )
+    numSymbol.push(symbols[0] +  ' = ' + i +"<br/>" )
     } else {
       numSymbol.push(symbols[symbolNum] +  ' = ' + i +"<br/>")
       if(symbolNum > 9){
