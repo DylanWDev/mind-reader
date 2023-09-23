@@ -22,7 +22,7 @@ let pageArr = [
     title: "Pick a number from 01 -99",
     nextBtn: "Next",
     subText: "when you have your number click next",
-    returnBtn: "⭯",
+    returnBtn: "<--",
   },
   {
     //* page 3
@@ -30,7 +30,7 @@ let pageArr = [
     nextBtn: "Next",
     subText: "Ex: 14 is 1 + 4 = 5",
     subText2: "click next to proceed",
-    returnBtn: "⭯",
+    returnBtn: "<--"'
   },
   {
     //* page 4
@@ -38,21 +38,21 @@ let pageArr = [
     nextBtn: "Next",
     subText: "Ex: 14 - 5 = 9",
     subText2: "click next to proceed",
-    returnBtn: "⭯",
+    returnBtn: "<--"'
   },
   {
     //* page 5
     title: "hi bbb",
-    nextBtn: "Next",
+    nextBtn: "Reveal",
     subText: "find your new number",
     subText2: "Note the symbol beside the number",
-    returnBtn: "⭯",
+    returnBtn: "<--"'
   },
   {
     //* page 6
     title: "hi bbg",
     subText: "Your symbol is:",
-    returnBtn: "⭯",
+    returnBtn: "<--"'
   },
 ];
 
