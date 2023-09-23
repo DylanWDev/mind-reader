@@ -19,7 +19,7 @@ let pageArr = [
   },
   {
     //* page 2
-    title: "Pick a number from 01 -99",
+    title: "Pick a number from 01 - 99",
     nextBtn: "Next",
     subText: "when you have your number click next",
     returnBtn: "<--",
@@ -30,7 +30,7 @@ let pageArr = [
     nextBtn: "Next",
     subText: "Ex: 14 is 1 + 4 = 5",
     subText2: "click next to proceed",
-    returnBtn: "<--"'
+    returnBtn: "<--",
   },
   {
     //* page 4
@@ -38,7 +38,7 @@ let pageArr = [
     nextBtn: "Next",
     subText: "Ex: 14 - 5 = 9",
     subText2: "click next to proceed",
-    returnBtn: "<--"'
+    returnBtn: "<--",
   },
   {
     //* page 5
@@ -46,13 +46,13 @@ let pageArr = [
     nextBtn: "Reveal",
     subText: "find your new number",
     subText2: "Note the symbol beside the number",
-    returnBtn: "<--"'
+    returnBtn: "<--",
   },
   {
     //* page 6
     title: "hi bbg",
     subText: "Your symbol is:",
-    returnBtn: "<--"'
+    returnBtn: "<--",
   },
 ];
 
@@ -128,7 +128,7 @@ let symbolNum = 0;
 function addSymbols() {
   for (let i = 0; i <= 99; i++) {
     if (i % 9 === 0) {
-      numSymbol.push(symbols[1] + " = " + i + "<br/>");
+      numSymbol.push(symbols[0] + " = " + i + "<br/>");
     } else {
       numSymbol.push(symbols[symbolNum] + " = " + i + "<br/>");
       if (symbolNum > 9) {
